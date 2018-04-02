@@ -1,2 +1,7 @@
 h1 Imports#new
 p Find me in app/views/imports/new.html.slim
+
+
+= form_tag imports_path, multipart: true do
+  = file_field_tag :csv
+  = submit_tag "Import data"

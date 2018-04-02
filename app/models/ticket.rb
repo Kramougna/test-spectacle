@@ -1,5 +1,7 @@
 class Ticket < ApplicationRecord
-  belongs_to :representations
-  belongs_to :users
-  belongs_to :transactions
+  enum type: %i[individual subscription]
+
+  belongs_to :representation
+  belongs_to :user
+  belongs_to :deal
 end

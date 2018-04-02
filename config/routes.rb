@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'dashboards/index'
 
-  get 'dashboards/show'
+  resources :dashboards, only: [:index, :show]
 
-  get 'imports/new'
-
-  get 'imports/create'
+  resources :imports, only: [:new, :create] do
+    get 'confirm', on: :collection
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'dashboards#index'
 end
