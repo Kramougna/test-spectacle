@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html
+  head
+    title TestSpectacle
+    = csrf_meta_tags
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+
+  body.d-flex.flex-column
+    = render partial: 'shared/header'
+
+    .container-fluid.d-flex.flex-fill
+      .row.flex-fill
+        .col-2.p-2.sidebar
+          = render partial: 'shared/menu'
+        .col-10.p-2.content
+          = yield

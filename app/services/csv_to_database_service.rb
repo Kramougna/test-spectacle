@@ -13,7 +13,6 @@ class CsvToDatabaseService
 
       # ap @representation
       @deal = ImportDealFromCsv.new(row, @user).call
-      ap @deal
       @ticket = ImportTicketFromCsv.new(row, @representation, @deal, @user).call
     end
   end

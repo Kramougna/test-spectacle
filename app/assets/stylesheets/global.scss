@@ -1,0 +1,31 @@
+$dark-blue: #203A45;
+$darker-blue: #122127;
+$white: #fff;
+
+html, body {
+  height: 100%;
+}
+
+.head {
+  background-color: $dark-blue;
+  color: $white;
+  padding: 1rem;
+}
+
+.sidebar {
+  background-color: $darker-blue;
+
+  li {
+    list-style: none;
+  }
+  a {
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.flex-fill {
+  flex-grow: 1;
+}
