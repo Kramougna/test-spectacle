@@ -8,7 +8,7 @@ class ImportDealFromCsv
   end
 
   def call
-    Deal.create_with(@deal).find_or_create_by(@deal.slice(:id))
+    Deal.create_with(@deal).find_or_create_by!(@deal.slice(:id))
   end
 
   private

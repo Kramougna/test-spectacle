@@ -10,7 +10,7 @@ class ImportTicketFromCsv
   end
 
   def call
-    Ticket.create_with(@ticket).find_or_create_by(@ticket.slice(:id))
+    Ticket.create_with(@ticket).find_or_create_by!(@ticket.slice(:id))
   end
 
   private

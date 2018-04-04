@@ -15,6 +15,6 @@ class ImportRepresentationFromCsv
   def call
     # We can use find or create on representation id
     # but check if a representation exist on same dates should be safer
-    Representation.where(@representation.slice(:start_date, :end_date)).first_or_create(@representation)
+    Representation.where(@representation.slice(:start_date, :end_date)).first_or_create!(@representation)
   end
 end

@@ -19,6 +19,7 @@ module TestSpectacle
       g.orm :active_record
       g.template_engine :slim
       g.javascript_engine :js
+      g.test_framework :rspec
     end
   end
 end

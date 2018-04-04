@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :dashboards, only: [:index, :show]
+  resources :dashboards, only: [:index]
 
   resources :imports, only: [:new, :create] do
     get 'confirm', on: :collection

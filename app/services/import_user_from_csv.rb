@@ -16,7 +16,7 @@ class ImportUserFromCsv
   end
 
   def call
-    User.create_with(@user).find_or_create_by(@user.slice(:email))
+    User.create_with(@user).find_or_create_by!(@user.slice(:email))
   end
 
   private

@@ -1,4 +1,8 @@
-h1 Dashboards#index
-p Find me in app/views/dashboards/index.html.slim
+h1 Dashboards
 
-=link_to "Import", new_import_path
+p Total de résérvations : #{@total_deal}
+p Total d'acheteurs : #{@uniq_buyer}
+p Age moyen des acheteurs: #{ @average_age} ans
+p Prix moyen / représentation: #{@average_price} €
+p Prix moyen / réservation: #{@average_deal} €
+

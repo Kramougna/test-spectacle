@@ -1,6 +1,7 @@
-h1 Imports#new
-p Find me in app/views/imports/new.html.slim
+h1 Imports
+p Import a csv file
 
+= render 'shared/flash_message' if !flash.empty?
 
 = form_tag imports_path, multipart: true do
   = file_field_tag :csv

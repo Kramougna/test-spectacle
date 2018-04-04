@@ -1,8 +1,9 @@
 class Deal < ApplicationRecord
-  enum payment: %i[window digitik]
+  enum source: %i[window digitik]
 
   belongs_to :user
   has_many :tickets
+  has_many :representations, through: :tickets
 
-  validates :user, :payment, presence: true
+  validates :user, :source, presence: true
 end
